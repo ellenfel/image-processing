@@ -34,3 +34,5 @@ def main():
     removed_noise = median_filter(arr, 3) 
     img = Image.fromarray(removed_noise)
     img.show()
+
+main()
