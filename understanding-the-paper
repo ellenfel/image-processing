@@ -83,16 +83,63 @@ maximum value of an absolute luminance difference in a processing window. In [19
 distorted pixels are determined by tuning two Gaussian membership functions. The final filter
 output is calculated using weighted mean filtering based on a fuzzy approach.
 
-The evaluation results from different filers in the literature demonstrate that (1) mean filtering
-outperforms median filtering for restoring salt-and-pepper noise, (2) an adaptive (dynamic)
-window size gives a superior performance over a fixed window size particularly when noise
-levels are high, (3) modifying only distorted pixels can better preserve image details. Therefore,
-this work proposes a new filter for dealing with salt-and-pepper noise in which the distorted
-pixels are firstly determined, and then a denoising operation is performed on these pixels. For
-each distorted pixel, the filter output is calculated as the weighted mean of undistorted pixels
-when the window size is 3×3 and calculated as the mean value of undistorted pixels which have
-the highest frequencies in accordance to their histogram distribution when the window size is
-larger.
+The evaluation results from different filers in the literature demonstrate that:
+ (1) mean filtering outperforms median filtering for restoring salt-and-pepper noise, 
+ (2) an adaptive (dynamic) window size gives a superior performance over a fixed window
+     size particularly when noise levels are high, 
+ (3) modifying only distorted pixels can better preserve image details. Therefore, this 
+     work proposes a new filter for dealing with salt-and-pepper noise in which the distorted
+     pixels are firstly determined, and then a denoising operation is performed on these pixels.
+     For each distorted pixel, the filter output is calculated as the weighted mean of 
+     undistorted pixels when the window size is 3×3 and calculated as the mean value of 
+     undistorted pixels which have the highest frequencies in accordance to their histogram 
+     distribution when the window size is larger.
+
+
+* THE PROPOSED FILTER DESCRIPTION
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
