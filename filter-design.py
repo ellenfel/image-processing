@@ -44,4 +44,46 @@ Y = numpy.pad(S, (1, 1))
 m= 0
 n= 0
 
+for r in range(3):
+    for i=fkh+1 in range(h-fkh+1):
+        for j=fkw+1 in range(w-fkw+1):
+            if(Y[i,j] != 0 and k==3):
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
 
