@@ -8,10 +8,8 @@ def add_noise(img):
 	# Getting the dimensions of the image
 	row , col = img.shape
 	
-	# Randomly pick some pixels in the
-	# image for coloring them white
-	# Pick a random number between 300 and 10000
-	number_of_pixels = random.randint(300, 10000)
+    #randomly putting 10000 salt
+	number_of_pixels = 10000
 	for i in range(number_of_pixels):
 	
 		# Pick a random y coordinate
@@ -23,10 +21,9 @@ def add_noise(img):
 		# Color that pixel to white
 		img[y_coord][x_coord] = 255
 		
-	# Randomly pick some pixels in
-	# the image for coloring them black
-	# Pick a random number between 300 and 10000
-	number_of_pixels = random.randint(300 , 10000)
+
+    #randomly putting 10000 salt
+	number_of_pixels = 10000
 	for i in range(number_of_pixels):
 	
 		# Pick a random y coordinate

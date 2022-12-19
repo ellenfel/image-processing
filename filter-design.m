@@ -42,8 +42,7 @@ for r=1:3
     for i=fkh+1:h-fkh
         for j=fkw+1:w-fkw
             if Y(i,j) ~= 0 && k == 3
-            V = uceuc(U,i,j);
-            Z = uceuc(Y,i,j);
+
             for c=1:3
                 for e=1:3
                     if c == 2 && e == 2
