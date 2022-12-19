@@ -1,5 +1,7 @@
 import random
 import cv2
+from PIL import Image
+
 
 def add_noise(img):
 
@@ -47,3 +49,8 @@ img = cv2.imread('cameraman-og.png',
 #Storing the image
 cv2.imwrite('salty-cameraman.jpg',
 			add_noise(img))
+def main():
+    img = Image.open("salty-cameraman.jpg")
+    img.show()
+
+main()
