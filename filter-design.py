@@ -52,7 +52,7 @@ j=fkw
 c=0
 e=0
 
-for r in range(10):
+for r in range(20):
     for i in range(h-fkh):
         for j in range(w-fkw):
             if(Y[i,j] != 0 and k==3):
@@ -72,7 +72,7 @@ for r in range(10):
 
 
 after_image=Image.fromarray(U)
-pil_image.show()                      
+after_image.show()                      
 
         
 #t = 1/abs(c-2) + abs(e-2)
