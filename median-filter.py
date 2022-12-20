@@ -28,7 +28,7 @@ def median_filter(data, filter_size):
     return data_final
 
 def main():
-    img = Image.open("salty-cameraman.jpg").convert("L")
+    img = Image.open("really-salty-cameraman.jpg").convert("L")
     arr = numpy.array(img)
     removed_noise = median_filter(arr, 3) 
     img = Image.fromarray(removed_noise)
@@ -38,7 +38,7 @@ main()
 
 
 
-
+"""
 1. allocate outputPixelValue[image width][image height]
 2. allocate window[window width × window height]
 3. edgex := (window width / 2) rounded down
@@ -56,7 +56,7 @@ main()
         sort entries in window[]
         outputPixelValue[x][y] :=
         window[window width * window height / 2]    
-
+"""
 
 
 

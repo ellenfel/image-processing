@@ -110,13 +110,18 @@ The binary mask S is created to detect the position of distorted pixels in the m
 
   After that, the weighted mean value of undistorted pixels is calculated as the filter output when the window size is 3×3.
   For larger window size, the undistorted pixels with the highest frequency are extracted and the mean value of these pixels is used as the new output.
+
+"""
   The frequencies of the pixels can give an indication of the main intensity value that is dominated in the window.
   The mean value of the highest frequency pixels could better preserve image details than the mean values of all undistorted pixels when the window size is greater than 3×3
-  Finally, if the largest window size is reached to a predetermined maximum value and none of the local pixels is noise-free, the pixel with the highest frequency in the window is selected as the new output value.
+"""
 
+  Finally, if the largest window size is reached to a predetermined maximum value and none of the local pixels is noise-free, the pixel with the highest frequency in the window is selected as the new output value.
   This filter is applied twice in order to deal with high noise levels
+
+"""
   weighted mean value gives better results when the window size is set at 3×3. While the mean value of only the highest frequency pixels give superior results when the window size is greater than 3×3
-  
+"""  
 
 
 
