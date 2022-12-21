@@ -9,7 +9,7 @@ def add_noise(img):
 	row , col = img.shape
 	
     #randomly putting 10000 salt
-	number_of_pixels = 10000
+	number_of_pixels = 150000
 	for i in range(number_of_pixels):
 	
 		# Pick a random y coordinate
@@ -23,7 +23,7 @@ def add_noise(img):
 		
 
     #randomly putting 10000 salt
-	number_of_pixels = 10000
+	number_of_pixels = 150000
 	for i in range(number_of_pixels):
 	
 		# Pick a random y coordinate
@@ -44,10 +44,10 @@ img = cv2.imread('cameraman-og.png',
 				cv2.IMREAD_GRAYSCALE)
 
 #Storing the image
-cv2.imwrite('salty-cameraman.jpg',
+cv2.imwrite('saaalttty-cameraman.jpg',
 			add_noise(img))
 def main():
-    img = Image.open("salty-cameraman.jpg")
+    img = Image.open("saaalttty-cameraman.jpg")
     img.show()
 
 main()
