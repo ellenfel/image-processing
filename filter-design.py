@@ -6,10 +6,10 @@ import numpy
 from PIL import Image
 
 
-I = Image.open("cameraman-og.png").convert("L")
+I = Image.open("/home/ellenfel/Desktop/repos/Image-processing/figures-results/cameraman-og.png").convert("L")
 I.show()
 
-Inoisy = Image.open("saaalttty-cameraman.jpg").convert("L")
+Inoisy = Image.open("/home/ellenfel/Desktop/repos/Image-processing/figures-results/saaalttty-cameraman.jpg").convert("L")
 Inoisy.show()
 
 Inoisy_arr = numpy.array(Inoisy)
