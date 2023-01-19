@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 
 #impors libs
-import numpy 
-from PIL import Image
+from headers import importAll
 from mat_methods import bymat
+
+importAll()
 
 I = Image.open("cameraman-og.png").convert("L")
 I.show()
