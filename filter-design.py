@@ -2,14 +2,15 @@
 # -*- coding: utf-8 -*-
 
 #impors libs
-import numpy 
-from PIL import Image
+from headers import importAll
+from mat_methods import bymat
 
+importAll()
 
-I = Image.open("/home/ellenfel/Desktop/repos/Image-processing/figures-results/cameraman-og.png").convert("L")
+I = Image.open("cameraman-og.png").convert("L")
 I.show()
 
-Inoisy = Image.open("/home/ellenfel/Desktop/repos/Image-processing/figures-results/saaalttty-cameraman.jpg").convert("L")
+Inoisy = Image.open("salty-cameraman.jpg").convert("L")
 Inoisy.show()
 
 Inoisy_arr = numpy.array(Inoisy)
@@ -38,7 +39,7 @@ for i in range(h):
 #step 4:        
 Inoisy_before = Inoisy
 
-k = 5           #filter size
+k = 3        #filter size
 fkh = k//2
 fkw = k//2
 
@@ -52,14 +53,15 @@ j=fkw+1
 c=0
 e=0
 
+
 for r in range(10):
     for i in range(h-fkh+1):
         for j in range(w-fkw+1):
-            if(Y[i,j] != 0 and k==5):
-                V = besebes(U,i,j)
-                Z = besebes(Y,i,j)
-                for c in range(5):
-                    for e in range(5):
+            if(Y[i,j] != 0 and k==3):
+                V = bymat.by3(U,i,j)
+                Z = bymat.by3(Y,i,j)
+                for c in range(3):
+                    for e in range(3):
                         if(c == 2 and e ==2):
                             continue
                         else:
@@ -83,6 +85,8 @@ after_image.show()
 #m=q + m
 #n=s + n
 
+
+###work-in process validation
 import cv2
 from math import log10, sqrt
 def PSNR(original, compressed):
@@ -94,10 +98,10 @@ def PSNR(original, compressed):
     psnr = 20 * log10(max_pixel / sqrt(mse))
     return psnr
 
-original = cv2.imread("saaalttty-cameraman.jpg")
-compressed = cv2.imread("ourmethod.PNG", 1)
-value = PSNR(original, compressed)
-print(f"PSNR value is {value} dB")
+#original = cv2.imread("salty-cameraman.jpg")
+#compressed = cv2.imread("ourmethod.PNG", 1)
+#value = PSNR(original, compressed)
+#print(f"PSNR value is {value} dB")
 
 
 
@@ -156,36 +160,3 @@ def besebes(b,x,y):
     v[4,4] = b[x+3,y+3]
 
     return v
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-
