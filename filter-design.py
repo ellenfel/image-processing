@@ -4,7 +4,7 @@
 #impors libs
 import numpy 
 from PIL import Image
-
+from mat_methods import bymat
 
 I = Image.open("cameraman-og.png").convert("L")
 I.show()
@@ -38,7 +38,7 @@ for i in range(h):
 #step 4:        
 Inoisy_before = Inoisy
 
-k = 5           #filter size
+k = 3        #filter size
 fkh = k//2
 fkw = k//2
 
@@ -52,14 +52,15 @@ j=fkw+1
 c=0
 e=0
 
+
 for r in range(10):
     for i in range(h-fkh+1):
         for j in range(w-fkw+1):
-            if(Y[i,j] != 0 and k==5):
-                V = besebes(U,i,j)
-                Z = besebes(Y,i,j)
-                for c in range(5):
-                    for e in range(5):
+            if(Y[i,j] != 0 and k==3):
+                V = bymat.by3(U,i,j)
+                Z = bymat.by3(Y,i,j)
+                for c in range(3):
+                    for e in range(3):
                         if(c == 2 and e ==2):
                             continue
                         else:
