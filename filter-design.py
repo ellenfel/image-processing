@@ -6,10 +6,10 @@ import numpy
 from PIL import Image
 
 
-I = Image.open("/home/ellenfel/Desktop/repos/Image-processing/figures-results/cameraman-og.png").convert("L")
+I = Image.open("cameraman-og.png").convert("L")
 I.show()
 
-Inoisy = Image.open("/home/ellenfel/Desktop/repos/Image-processing/figures-results/saaalttty-cameraman.jpg").convert("L")
+Inoisy = Image.open("salty-cameraman.jpg").convert("L")
 Inoisy.show()
 
 Inoisy_arr = numpy.array(Inoisy)
@@ -83,6 +83,8 @@ after_image.show()
 #m=q + m
 #n=s + n
 
+
+###work-in process validation
 import cv2
 from math import log10, sqrt
 def PSNR(original, compressed):
@@ -94,10 +96,10 @@ def PSNR(original, compressed):
     psnr = 20 * log10(max_pixel / sqrt(mse))
     return psnr
 
-original = cv2.imread("saaalttty-cameraman.jpg")
-compressed = cv2.imread("ourmethod.PNG", 1)
-value = PSNR(original, compressed)
-print(f"PSNR value is {value} dB")
+#original = cv2.imread("salty-cameraman.jpg")
+#compressed = cv2.imread("ourmethod.PNG", 1)
+#value = PSNR(original, compressed)
+#print(f"PSNR value is {value} dB")
 
 
 
@@ -156,36 +158,3 @@ def besebes(b,x,y):
     v[4,4] = b[x+3,y+3]
 
     return v
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-

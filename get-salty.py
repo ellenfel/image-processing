@@ -44,10 +44,10 @@ img = cv2.imread('cameraman-og.png',
 				cv2.IMREAD_GRAYSCALE)
 
 #Storing the image
-cv2.imwrite('saaalttty-cameraman.jpg',
+cv2.imwrite('saty-cameraman.jpg',
 			add_noise(img))
 def main():
-    img = Image.open("saaalttty-cameraman.jpg")
+    img = Image.open("salty-cameraman.jpg")
     img.show()
 
 main()
