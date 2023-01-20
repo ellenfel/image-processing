@@ -6,6 +6,9 @@ from headers import importAll
 from mat_methods import bymat
 
 importAll()
+import numpy
+from PIL import Image
+
 
 I = Image.open("cameraman-og.png").convert("L")
 I.show()
