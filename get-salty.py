@@ -3,6 +3,7 @@ import cv2
 from PIL import Image
 
 
+
 def add_noise(img):
 
 	# Getting the dimensions of the image
