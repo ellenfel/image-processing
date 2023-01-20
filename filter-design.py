@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+#This dir is used for experimentation with filter design
+
 #impors libs
 from headers import importAll
 from mat_methods import bymat
