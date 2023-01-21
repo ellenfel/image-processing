@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+#This dir is used for experimentation with filter design
+#it is not a part of the project 
+
 #impors libs
 from headers import importAll
 from mat_methods import bymat
 
 importAll()
+import numpy
+from PIL import Image
+
 
 I = Image.open("cameraman-og.png").convert("L")
 I.show()
