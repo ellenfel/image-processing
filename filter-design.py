@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #This dir is used for experimentation with filter design
+#it is not a part of the project 
 
 #impors libs
 from headers import importAll
